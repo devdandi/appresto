@@ -1,0 +1,26 @@
+Dari Form Entri Order
+									<div class="input-group input-search">
+										<label>ID Pesanan</label>
+										<input type="text" class="form-control" readonly="" value="<?php echo base_convert(microtime(false), 36, 10); ?>" name="idpesanan">
+									</div>
+									<br>
+									<div class="input-group input-search">
+										<label>ID Menu</label>
+										<select name="idmenu" class="form-control">
+											<option>......</option>
+											<?php foreach($idmenu as $datamenu) : ?>
+												<option value="<?php echo $datamenu['idmenu'] ?>"><?php echo $datamenu['namamenu']; ?></option>
+											<?php endforeach; ?>
+										</select>
+									</div>
+									<br>
+									<div class="input-group input-search">
+										<label >Jumlah Pesan</label>
+										<input type="number" class="form-control name="q" id="q"" name="jumlahpesan">
+										<input type="text" hidden="" name="iduser" value="<?php echo $this->session->userdata('namauser'); ?>">
+									</div>
+									<br>
+									<div class="input-group input-search">
+										<button class="btn btn-primary" name="submit">Tambahkan Pesanan</button>
+									</div>
+                                    
